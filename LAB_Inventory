@@ -1,3 +1,9 @@
+[eos_switches]
 A1 ansible_host=172.16.1.201
 A2 ansible_host=172.16.1.202
 
+[eos_switches:vars]
+ansible_ssh_user=ansible
+transport=https
+username=eapi
+password=arista
