@@ -1,3 +1,5 @@
-A1 172.16.1.201
-A2 172.16.1.202
+[Arista]
+A1 ansible_host=172.16.1.201
+A2 ansible_host=172.16.1.202
+A3 ansible_host=172.16.1.203
 
