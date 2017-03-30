@@ -1,0 +1,11 @@
+ansible_ssh_host: 172.16.1.204
+ansible_ssh_pass: admin
+interfaces:
+  - name: Loopback0
+    enable: true
+    description: " USED FOR VTEP "
+      
+ip_interfaces:
+  - name: Loopback0
+    address: 10.0.0.4/32
+

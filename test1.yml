@@ -1,0 +1,22 @@
+--- # This playbook is used to test connectivity to the devices and gather some facts
+- hosts: eos_switches
+  gather_facts: no
+  connection: local
+
+  vars_files:
+    - password.yml
+  vars:
+    provider:
+      host: "{{ inventory_hostname }}"
+      username: "admin"
+      password: "{{ ansible_ssh_pass }}"
+      authorize: yes
+      auth_pass: "{{ enable }}"
+      use_ssl: no
+      transport: cli
+
+  roles:
+    - arista.eos-interfaces
+    - arista.eos-ipv4
+  
+
